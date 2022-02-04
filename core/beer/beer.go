@@ -31,7 +31,7 @@ func (beerType Type) AsString() string {
 	return "Unknown"
 }
 
-type Style string
+type Style int
 
 const (
 	Amber = iota + 1
@@ -51,8 +51,8 @@ const (
 	Honey
 )
 
-func (style Style) AsString() string {
-	switch style {
+func (beerStyle Style) AsString() string {
+	switch beerStyle {
 	case Amber:
 		return "Amber"
 	case Blonde:
